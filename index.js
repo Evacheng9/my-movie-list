@@ -33,7 +33,6 @@
   //listen to search bar
   searchForm.addEventListener('submit', event => {
     event.preventDefault()
-    //終止 JavaScript 來掌控 UI 的預設行為，此處把 <form> 和 <button> 放在一起，<button> 的預設行為是「將表單內容透過 HTTP request 提交給遠端伺服器」，除非使用 Ajax 技術發送非同步請求，否則一般的 HTTP request 都會一直刷新頁面
     let results = []
     const regex = new RegExp(searchInput.value, 'i')
     results = data.filter(movie => movie.title.match(regex))
